@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            background-color: mintcream;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .step-indicators {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        .step-indicators li {
+            display: inline-block;
+            margin-right: 5px;
+            cursor: pointer;
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .step-indicators li.active {
+            background-color: blue;
+            color: white;
+            border-color: blue;
+        }
+        .navigation-buttons {
+          display: inline-block;
+            margin-right: 5px;
+            cursor: pointer;
+            padding: 5px 10px;
+            
+            border: 1px solid #ccc;
+            border-radius: 5px;<br>  
+        }
+        .form-section {
+            display: none;
+        }
+        .form-section.active {
+            display: block;
+        }
+        header{
+            background-color: lightcyan;
+            padding:10px 0;
+            text-align: center;
+             border-radius: 15px;
+        }
+        header img{
+            height:50px;
+            border-radius:50px;
+        }
+        header h1{
+            margin:0;
+            font-size:24px;
+            color:#333;
+            font-family: century;
+        }
+         .personal-image {
+            float: right;
+            margin: 10px;
+            width: 100px; 
+            height: 100px;
+            border-radius: 50%;
+
+        }
+    </style>
+</head>
+<body background bgcolor="skyblue">
+<header>
+<img src="https://www.creativefabrica.com/wp-content/uploads/2022/06/06/PR-logo-design-Graphics-31862184-1-1-580x386.jpg"></img>
+<h1>PR CORPORATION FOR FINANCIAL MAINTAINANCE</h1>
+<h3>Gujara M.P-2 Nayabasti Katani</h3>
+<h3>Rautahat, Nepal</h3>
+ <div style="display: flex; border-radius: 15px; width:100%;">
+        <div style="width: 15%; background: #AFEEEE;">
+            <b> परिचय</b>
+        </div>
+        <div style="width: 85%;">
+            <marquee bgcolor="mintcream"<br><b>वित्तीय निगमहरूले आर्थिक वृद्धिको लागि बलियो समर्थन प्रदान गर्दछ। तिनीहरूले लगानीको सुविधा दिन्छ, व्यवसाय र व्यक्तिहरूको लागि ऋण प्रदान गर्दछ, र जोखिम व्यवस्थापन गर्न मद्दत गर्दछ। स्रोतहरू र विशेषज्ञताहरू जम्मा गरेर, तिनीहरूले बजार स्थिरता र पालनपोषण नवाचारलाई सक्षम पार्छन्, अन्ततः स्वस्थ अर्थतन्त्र र सुधारिएको जीवनस्तरमा योगदान पुर्याउँछन्।</b></marquee>
+        </div>
+    </div>
+</header>
+    <ul class="step-indicators">
+        <li class="active" data-step="1">1. Personal Information</li>
+        <li data-step="2">2. Contact Details</li>
+        <li data-step="3">3. Financial Goals</li>
+    </ul>
+
+    <div id="form-1" class="form-container form-section active">
+        <h2><center>Personal Information</center></h2>
+        <label for="first-name">First Name:</label><br>
+        <input type="text" id="first-name" name="first-name" required><br><br><br> 
+        <label for="last-name">Last Name:</label><br>          
+        <input type="text" id="last-name" name="last-name" required><br><br><br>
+        <label for="birth-date">Birth Date:</label><br>
+        <input type="date" id="birth-date" name="birth-date" required><br><br><br>
+        <label for="address">Address: </label><br>
+        <input type="text" id="address" name="address" required><br><br><br>
+        <label for="father-name">Father Name:</label><br>
+        <input type="text" id="father-name" name="father-name" required><br><br><br>
+        <label for="mother-name">Mother Name: </label><br>
+        <input type="text" id="mother-name" name="mother-name" reqired><br><br><br> 
+        <label for="country-name">Country Name: </label><br>
+        <input type="text" id="country-name" name="country-name" reqired><br><br><br>
+        <label for="district-name">District Name </label><br>
+        <input type="text" id="district-name" name="district-name" reqired><br><br><br>
+          <img src="https://img.freepik.com/free-vector/human-resource-management-job-analysis-sourcing-screening-selection-female-cartoon-character-reading-job-applications-cv-candidatees_335657-2682.jpg?size=338&ext=jpg&ga=GA1.1.2116175301.1717804800&semt=ais_user" alt="Personal Image" class="personal-image">
+
+        <div class="navigation-buttons">
+            <button type="button" class="prev-button">Back</button>
+            <button type="button" class="next-button">Next</button>
+        </div>
+    
+</div>                   
+    </div>
+
+    <div id="form-2" class="form-container form-section">
+        <h2><center>Contact Details</center></h2>
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone"><br><br><br>
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email"><br><br><br>
+        <label for="fax-number">Fax Number:</label><br>
+        <input type="tel" id="fax-nember" name="fax-number"><br><br><br>
+        <label for="guardian-phone-number">Guardian Phone Number:</label><br>
+        <input type="tel" id="guardian-phone-number" name="guardian-phone-number"><br><br><br>
+        <img src="https://i.pinimg.com/564x/15/17/f8/1517f8381d7d16a5ed622a8c0909df97.jpg" alt="Personal Image" class="personal-image">
+        <div class="navigation-buttons">
+            <button type="button" class="prev-button">Back</button>
+            <button type="button" class="next-button">Next</button>
+        </div>
+    </div>
+
+    <div id="form-3" class="form-container form-section">
+        <h2><center>Financial Goals</center></h2>
+        <label for="daily-income">Daily Income:</label><br>
+        <input type="number" id="daily-income" name="daily-income"><br><br><br>
+        <label for="monthly-income">Monthly Income:</label><br>
+        <input type="number" id="monthly-income" name="monthly-income"><br><br><br>
+        <label for="yearly-income">Yearly Income:</label><br>
+        <input type="number" id="yearly-income" name="yearly-income"><br><br><br>
+         <img src="data:image/png;base64,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" alt="Personal Image" class="personal-image">
+        <div class="navigation-buttons">
+            <button type="button" class="prev-button">Back</button>
+            <button type="submit" class="submit-button">Submit</button>
+        </div>
+    </div>
+        <div id="thank-you" class="form-container form-section" style="display: none;">
+    <center>
+    <h2>Thank You!</h2>
+    <img src="https://static.vecteezy.com/system/resources/previews/024/382/913/original/green-check-mark-icon-symbol-logo-in-a-circle-tick-symbol-green-checkmark-approve-transparent-free-png.png " alt="Thank You Image" width="30%" ></img>
+    </center>
+</div>
+    <script>
+        var indicators = document.querySelectorAll('.step-indicators li');
+        var forms = document.querySelectorAll('.form-section');
+
+        indicators.forEach(function(indicator) {
+            indicator.addEventListener('click', function() {
+                var step = this.getAttribute('data-step');
+                forms.forEach(function(form) {
+                    form.classList.remove('active');
+                });
+                indicators.forEach(function(indicator) {
+                    indicator.classList.remove('active');
+                });
+                document.getElementById('form-' + step).classList.add('active');
+                this.classList.add('active');
+            });
+        });
+
+        var nextButtons = document.querySelectorAll('.next-button');
+        var prevButtons = document.querySelectorAll('.prev-button');
+
+        nextButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                var currentForm = this.closest('.form-section');
+                var nextForm = currentForm.nextElementSibling;
+                if (nextForm) {
+                    currentForm.classList.remove('active');
+                    nextForm.classList.add('active');
+                    updateIndicators(nextForm.id);
+                }
+            });
+        });
+
+        prevButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                var currentForm = this.closest('.form-section');
+                var prevForm = currentForm.previousElementSibling;
+                if (prevForm) {
+                    currentForm.classList.remove('active');
+                    prevForm.classList.add('active');
+                    updateIndicators(prevForm.id);
+                }
+            });
+        });
+
+        function updateIndicators(formId) {
+            var step = formId.split('-')[1];
+            indicators.forEach(function(indicator) {
+                if (indicator.getAttribute('data-step') === step) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+document.querySelector('.submit-button').addEventListener('click', function() {
+    var forms = document.querySelectorAll('.form-section');
+    forms.forEach(function(form) {
+        form.style.display = 'none';
+    });
+    document.getElementById('thank-you').style.display = 'block';
+});
+    </script>
+</body>
+</html>
